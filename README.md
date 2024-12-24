@@ -1,24 +1,10 @@
 # -Handwritten-Signature-Verification
-signature verification model using a Siamese Neural Network (SNN) architecture. The model is designed to distinguish between real and forged handwritten signatures. The main steps include:
+Signature Verification using Siamese Network and CNN
 
-Dataset Setup:
+This project involves building a signature verification system using a Siamese Neural Network (SNN) combined with Convolutional Neural Networks (CNN). The system is designed to distinguish between real and forged signatures. The model architecture includes:
 
-The dataset is downloaded from Kaggle, containing real and forged signature images.
-The images are organized into Train and Test directories with separate subdirectories for real and forged signatures.
-Data Preprocessing:
-
-Image augmentation techniques like rotation, shifting, zooming, and flipping are applied to the training data to improve model generalization.
-The pixel values are rescaled to a range of 0 to 1.
-Model Architecture:
-
-A shared convolutional neural network (CNN) is used for both input branches (real and forged images).
-The embeddings from both branches are compared using L1 distance to determine if the signatures belong to the same class.
-Training and Evaluation:
-
-The model is trained using binary cross-entropy loss and Adam optimizer.
-Early stopping is employed to prevent overfitting during training.
-After training, the model is evaluated on a test set with metrics like accuracy and loss.
-Output:
-
-The model is capable of classifying pairs of images as real or fake signatures, showing strong potential for real-world application in signature verification tasks.
-
+Pretrained CNN for feature extraction followed by custom CNN layers with Batch Normalization, MaxPooling, and Dropout to enhance generalization and accuracy.
+Siamese architecture utilizing L1 distance to compare pairs of signatures.
+Image augmentation techniques to improve model robustness and generalization.
+Achieved high accuracy in signature verification tasks by training with a binary cross-entropy loss function and Adam optimizer.
+Technologies used: TensorFlow, Keras, Python, Siamese Networks, Convolutional Neural Networks (CNNs), Batch Normalization, MaxPooling, Image Augmentation.
